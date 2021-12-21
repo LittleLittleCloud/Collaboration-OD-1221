@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Collaboration_OD_1221</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.0" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.7.0" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.9.0" />
+    <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup Label="Object">
+    <None Include="Object.consumption.cs">
+      <DependentUpon>Object.mbconfig</DependentUpon>
+    </None>
+    <None Include="Object.map.json">
+      <DependentUpon>Object.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Object.onnx">
+      <DependentUpon>Object.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Object.training.cs">
+      <DependentUpon>Object.mbconfig</DependentUpon>
+    </None>
+    <None Include="Object.zip">
+      <DependentUpon>Object.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

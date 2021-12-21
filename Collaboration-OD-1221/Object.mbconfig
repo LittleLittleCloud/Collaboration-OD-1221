@@ -1,0 +1,36 @@
+﻿{
+  "TrainingTime": 2147482,
+  "Scenario": "ObjectDetection",
+  "DataSource": {
+    "Type": "Vott",
+    "Version": 1,
+    "FilePath": "C:\\Users\\vzhuqin\\Desktop\\StopSignPictureNameWithSpace\\vott-json-export\\StopSign-export.json"
+  },
+  "Environment": {
+    "Type": "Azure",
+    "Version": 1,
+    "SubscriptionID": "83635e26-687a-4333-a2a0-33e3cd1f573a",
+    "ResourceGroupName": "FullTestPass",
+    "WorkspaceName": "FullTestPass",
+    "ComputeName": "FullTestPass01",
+    "Location": "australiaeast",
+    "ExperimentName": "Objectdetection"
+  },
+  "RunHistory": {
+    "Version": 0,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "Azure AutoML Algorithm",
+        "Score": 0.91,
+        "RuntimeInSeconds": 747.8683648
+      }
+    ],
+    "Pipeline": "{\"parameter\":{\r\n  \"0\": {\r\n    \"OutputColumnName\": \"input1\",\r\n    \"InputColumnName\": \"input1\",\r\n    \"ImageHeight\": 600,\r\n    \"ImageWidth\": 800,\r\n    \"CropAnchor\": \"Center\",\r\n    \"Resizing\": \"Fill\"\r\n  },\r\n  \"1\": {\r\n    \"OutputColumnName\": \"input1\",\r\n    \"InputColumnName\": \"input1\",\r\n    \"ColorsToExtract\": \"Rgb\",\r\n    \"OrderOfExtraction\": \"ARGB\",\r\n    \"OutputAsFloatArray\": true\r\n  },\r\n  \"2\": {\r\n    \"ModelFile\": \"C:\\\\Users\\\\vzhuqin\\\\source\\\\repos\\\\Collaboration-OD-1221\\\\Collaboration-OD-1221\\\\Object.onnx\",\r\n    \"FallbackToCpu\": true\r\n  }\r\n},\"estimators\":[\"ResizeImages\",\"ExtractPixels\",\"ApplyOnnxModel\"]}",
+    "MetricName": "accuracy"
+  },
+  "Type": "TrainingConfig",
+  "Version": 1
+}
