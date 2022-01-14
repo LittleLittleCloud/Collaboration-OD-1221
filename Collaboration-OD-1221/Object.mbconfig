@@ -4,7 +4,7 @@
   "DataSource": {
     "Type": "Vott",
     "Version": 1,
-    "FilePath": "C:\\Users\\vzhuqin\\Desktop\\StopSignPictureNameWithSpace\\vott-json-export\\StopSign-export.json"
+    "FilePath": "C:\\Users\\xiaoyuz\\Desktop\\object-detection-od\\vott-json-export\\cats-export.json"
   },
   "Environment": {
     "Type": "Azure",
@@ -17,20 +17,47 @@
     "ExperimentName": "Objectdetection"
   },
   "RunHistory": {
-    "Version": 0,
+    "Version": 1,
     "Type": "Result",
     "Trials": [
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "Azure AutoML Algorithm",
-        "Score": 0.91,
-        "RuntimeInSeconds": 747.8683648
+        "Score": 0.51,
+        "RuntimeInSeconds": 963.4943609
       }
     ],
-    "Pipeline": "{\"parameter\":{\r\n  \"0\": {\r\n    \"OutputColumnName\": \"input1\",\r\n    \"InputColumnName\": \"input1\",\r\n    \"ImageHeight\": 600,\r\n    \"ImageWidth\": 800,\r\n    \"CropAnchor\": \"Center\",\r\n    \"Resizing\": \"Fill\"\r\n  },\r\n  \"1\": {\r\n    \"OutputColumnName\": \"input1\",\r\n    \"InputColumnName\": \"input1\",\r\n    \"ColorsToExtract\": \"Rgb\",\r\n    \"OrderOfExtraction\": \"ARGB\",\r\n    \"OutputAsFloatArray\": true\r\n  },\r\n  \"2\": {\r\n    \"ModelFile\": \"C:\\\\Users\\\\vzhuqin\\\\source\\\\repos\\\\Collaboration-OD-1221\\\\Collaboration-OD-1221\\\\Object.onnx\",\r\n    \"FallbackToCpu\": true\r\n  }\r\n},\"estimators\":[\"ResizeImages\",\"ExtractPixels\",\"ApplyOnnxModel\"]}",
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnName": "input1",
+          "InputColumnName": "input1",
+          "ImageHeight": 600,
+          "ImageWidth": 800,
+          "CropAnchor": "Center",
+          "Resizing": "Fill"
+        },
+        "1": {
+          "OutputColumnName": "input1",
+          "InputColumnName": "input1",
+          "ColorsToExtract": "Rgb",
+          "OrderOfExtraction": "ARGB",
+          "OutputAsFloatArray": true
+        },
+        "2": {
+          "ModelFile": "C:\\Users\\xiaoyuz\\source\\repos\\Collaboration-OD-1221\\Collaboration-OD-1221\\Object.onnx",
+          "FallbackToCpu": true
+        }
+      },
+      "estimators": [
+        "ResizeImages",
+        "ExtractPixels",
+        "ApplyOnnxModel"
+      ]
+    },
     "MetricName": "accuracy"
   },
   "Type": "TrainingConfig",
-  "Version": 1
+  "Version": 2
 }

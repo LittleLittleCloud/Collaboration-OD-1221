@@ -32,7 +32,7 @@ namespace Collaboration_OD_1221
         #region model output class
         public class ModelOutput
         {
-            public string[] ObjectTags = new string[] { "--bg--", "StopSignWithSpacesInName", };
+            public string[] ObjectTags = new string[] { "--bg--", "Face", "cat", };
 
             [ColumnName("boxes")]
             public float[] Boxes { get; set; } = new float[0];

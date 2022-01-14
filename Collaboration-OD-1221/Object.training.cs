@@ -29,7 +29,7 @@ namespace Collaboration_OD_1221
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.ResizeImages(outputColumnName:@"input1",inputColumnName:@"input1",imageHeight:600,imageWidth:800,cropAnchor:ImageResizingEstimator.Anchor.Center,resizing:ImageResizingEstimator.ResizingKind.Fill)      
                                     .Append(mlContext.Transforms.ExtractPixels(outputColumnName:@"input1",inputColumnName:@"input1",colorsToExtract:ImagePixelExtractingEstimator.ColorBits.Rgb,orderOfExtraction:ImagePixelExtractingEstimator.ColorsOrder.ARGB,outputAsFloatArray:true))      
-                                    .Append(mlContext.Transforms.ApplyOnnxModel(modelFile:@"C:\Users\vzhuqin\source\repos\Collaboration-OD-1221\Collaboration-OD-1221\Object.onnx",fallbackToCpu:true));
+                                    .Append(mlContext.Transforms.ApplyOnnxModel(modelFile:@"C:\Users\xiaoyuz\source\repos\Collaboration-OD-1221\Collaboration-OD-1221\Object.onnx",fallbackToCpu:true));
 
             return pipeline;
         }
